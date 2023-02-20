@@ -1,0 +1,62 @@
+@import "../../styles/_color.scss";
+
+.card{
+  background-color: $card;
+  color: white;
+  border-radius: 20px;
+  width: 280px;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  img{
+    border-radius: 15px 15px 0 0;
+    width: 280px;
+  }
+  h3{
+    padding: 5px;
+    text-align: center;
+    transition: .1s ease-in-out;
+  }
+  .info_card{
+    padding: 10px;
+    div{
+      margin: 10px 0;
+    }
+    span{
+      color: $text_lite;
+    }
+    .alive, .dead, .unknown{
+      border-radius: 15px;
+      padding: 0 10px;
+      color: rgb(255, 255, 255);
+    }
+    .alive{
+      background-color: rgb(3, 167, 3);
+    }
+    .dead{
+      background-color: $red;
+    }
+    .unknown{
+      background-color: $text_lite;
+    }
+  }
+  button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    background-color: $gold;
+    border-radius: 0 0 15px 15px;
+    transition: .1s ease-in-out;
+  }
+  button:hover{
+    opacity: .7;
+  }
+}
+.card:hover{
+  h3{
+    color: $gold;
+  }
+}

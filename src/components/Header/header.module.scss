@@ -1,0 +1,45 @@
+@import '../../styles/_color.scss';
+
+.header{
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  margin: 10px;
+  color: $text_dark;
+}
+
+.header_main{
+  display: flex;
+  justify-content: space-between;
+  nav{
+    width: 300px;
+    font-size: 25px;
+    ul{
+      display: inline-flex;
+      width: 400px;
+      justify-content: space-between;
+      a{
+        color: $text_dark;
+      }
+      a:hover{
+        color: $gold;
+      }
+    }
+    input{
+      font-size: 20px;
+      margin: 20px 0;
+      width: 400px;
+      border: none;
+      background: none;
+      outline: none;
+      padding: 5px 2px;
+      border-bottom: 1px solid black;
+    }
+    input:focus{
+      border-color: $gold;
+    }
+  }
+  button{
+    height: 25px;
+    width: 100px;
+  }
+}
