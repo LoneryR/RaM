@@ -12,21 +12,24 @@ const useRamApi = () => {
       &status=${status}
       &species=${species}
       &gender=${gender}`)
+      setloading(false)
       return await response.data
     } catch (error) {
       console.log(error)
+      
     } 
-    setloading(false)
+   
   }
   const changePage = async(page) => {
+    setloading(true)
     try {
-      setloading(true)
       const response = await axios.get(`${page}`)
+      setloading(false)
       return await response.data
     } catch (error) {
       console.log(error)
     }
-    setloading(false)
+    
   }
 
   return {

@@ -42,9 +42,6 @@ const CharactersCard = ({data}) => {
           {origin.name}
         </div>
       </div>
-      <button>
-        More
-      </button>
     </div>
   )
 }

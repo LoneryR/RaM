@@ -19,8 +19,35 @@ body{
   }
 }
 
-.app{
+.App{
   min-height: 100vh;
+  .buttons{
+    background-color: $bg_dark;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    align-items: center;
+    font-size: 40px;
+    button{
+      margin: 0 10px;
+      padding: 5px;
+      border: none;
+      background: none;
+      outline: none;
+      border: 2px solid $gold;
+      border-radius: 15px;
+      color: white;
+      font-size: 20px;
+      width: 100px;
+      cursor: pointer;
+      transition: .1s ease-in;
+      &:hover{
+        background-color: $gold;
+      }
+    }
+  }
 }
 
 main{
@@ -37,14 +64,5 @@ main{
   .main_info{
     flex-grow: 1;
     width: 45%;
-  }
-  .buttons{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    button{
-      margin: 0 10px;
-    }
   }
 }

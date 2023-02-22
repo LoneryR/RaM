@@ -1,34 +1,45 @@
 @import "../../styles/_color.scss";
 
 aside{
-  max-width: 400px;
+  max-width: 450px;
   header{
     text-align: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    h1{
+      width: 25%;
+    }
+  }
+  h2{
+    text-align: center;
+    color: $gold;
+  }
+  div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
   }
   button{
     background: none;
     color: white;
     outline: none;
     border: none;
+    border: 2px solid $gold;
     border-radius: 15px;
-    width: 100%;
-    height: 40px;
+    height: 100%;
+    padding: 5px;
     font-size: 20px;
     margin: 10px;
     cursor: pointer;
-    background-color: $text_lite;
+    width: 40%;
+    transition: .1s ease-in;
     &:hover{
       background-color: $gold;
     }
+    &.active{
+      background-color: $gold;
+    }
   }
-  .values{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-.active{
-  background-color: $gold;
 }
