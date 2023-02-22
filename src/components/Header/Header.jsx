@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import ramApi from '../../api/ram'
+import useRamApi from '../../api/useRamApi'
 import style from './header.module.scss'
 
 const Header = (data) => {
   const {getCharacters, status, species, gender, getPage} = data
   const [name, setName] = useState('')
-  const {searchCharacters} = ramApi()
+  const {searchCharacters} = useRamApi()
 
   useEffect(() => {
     searchCharacters(1, name, status, species, gender)

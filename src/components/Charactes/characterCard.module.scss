@@ -27,7 +27,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
   &.alive{
     @include card_color($green)
   }

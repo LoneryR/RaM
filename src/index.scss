@@ -19,8 +19,13 @@ body{
   }
 }
 
+.app{
+  min-height: 100vh;
+}
+
 main{
   padding: 10px;
+  min-height: calc(100vh - 114px);
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
