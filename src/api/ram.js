@@ -1,19 +1,17 @@
 import axios from "axios"
 
 const ramApi = () => {
-  const charactersApi = async(page=2) => {
+  const searchCharacters = async(page=2, name='', status='', species='', gender='') => {
     try {
-      const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
+      const response = await axios.get(`https://rickandmortyapi.com/api/character/?
+      page=${page}
+      &name=${name}
+      &status=${status}
+      &species=${species}
+      &gender=${gender}`)
       return await response.data
     } catch (error) {
-      throw new Error(error)
-    }
-  }
-  const searchCharacters = async(page=2, name='') => {
-    try {
-      const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}`)
-      return await response.data
-    } catch (error) {
+      console.log(error.response.status)
       throw new Error(error)
     }
   }
@@ -27,9 +25,8 @@ const ramApi = () => {
   }
 
   return {
-    charactersApi,
     searchCharacters,
-    changePage
+    changePage,
   }
 }
 

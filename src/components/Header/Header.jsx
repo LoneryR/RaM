@@ -3,16 +3,17 @@ import ramApi from '../../api/ram'
 import style from './header.module.scss'
 
 const Header = (data) => {
-  const {getCharacters, page} = data
+  const {getCharacters, status, species, gender, getPage} = data
   const [name, setName] = useState('')
   const {searchCharacters} = ramApi()
 
   useEffect(() => {
-    searchCharacters(page, name)
+    searchCharacters(1, name, status, species, gender)
     .then(res => {
+      getPage(1)
       getCharacters(res)
     })
-  }, [name, page])
+  }, [name, status, species, gender])
 
   return (
     <header className={style.header}>

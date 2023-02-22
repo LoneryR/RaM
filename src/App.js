@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Characters from "./components/Charactes/Characters";
 import Filter from "./components/Filter/Filter";
 import Header from "./components/Header/Header";
@@ -9,6 +8,9 @@ function App() {
 
   const [characters, setCharacters] = useState('')
   const [page, setPage] = useState('')
+  const [status, setStatus] = useState('')
+  const [species, setSpecies] = useState('')
+  const [gender, setGender] = useState('')
 
   const getCharacters = (value) => {
     setCharacters(value)
@@ -18,13 +20,25 @@ function App() {
     setPage(value)
   }
 
+  const getStatus = (value) => {
+    setStatus(value)
+  }
+
+  const getSpecies = (value) => {
+    setSpecies(value)
+  }
+
+  const getGender = (value) => {
+    setGender(value)
+  }
+
   return (
     <div className="App">
-      <Header getCharacters={getCharacters} page={page}/>
+      <Header getCharacters={getCharacters} status={status} species={species} getPage={getPage} gender={gender}/>
       <main>
-        <Filter />
+        <Filter getStatus={getStatus} getSpecies={getSpecies} getGender={getGender}/>
         <div className="main_info">
-          <Characters characters={characters} getPage={getPage} getCharacters={getCharacters}/>
+          <Characters characters={characters} getCharacters={getCharacters} page={page} getPage={getPage}/>
         </div>
         <Information />
       </main>

@@ -19,6 +19,7 @@
       justify-content: space-between;
       a{
         color: $text_dark;
+        transition: .2s ease-in-out;
       }
       a:hover{
         color: $gold;
